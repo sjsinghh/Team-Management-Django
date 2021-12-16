@@ -1,0 +1,41 @@
+{% extends 'base/main.html' %}
+
+{% block content%}
+
+<div class="header-bar">
+    <div>
+        <h1>
+            Team Members
+        </h1>
+        <h3 style="margin:0"> You have <i>{{count}}</i> Team Member{{ count|pluralize:"s"}}</h3>
+    </div>
+</div>
+
+<div id="team-add-wrapper">
+  
+    <a id="add-link" href="{% url 'team-add' %}">&#x2b;</a>
+  
+</div>
+<div id="teamlist" class="team-items-wrapper">
+    {% for team_member in team %}
+    <div class="team-wrapper" data-position="{{team_member.pk}}">
+        <div class="team-title">
+
+            <div class="">
+                <i class="fa fa-user"></i>
+            </div>
+            <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}}</a> 
+        </div>
+        <div class="team-controls">
+          
+        </div>
+    </div>
+
+    {% empty %}
+    <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
+        <h3>No Team Members are Added.</h3>
+        <h3>Add a <a style="text-decoration: none; color: #e53935;" href="{% url 'team-add' %}">New Team Member</a> ! </h3>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content%}
