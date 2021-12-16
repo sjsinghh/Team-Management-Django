@@ -33,7 +33,7 @@ Try opening [http://localhost:8000](http://localhost:8000) in the browser.
 Now you are good to go.
 
 
-### 9. URLs
+### 5. URLs
 #### Team Members List: [http://localhost:8000/(http://localhost:8000/)
 ![](https://i.imgur.com/76hGcmp.png)
 #### Add a new Team Member: [http://localhost:8000/team-add](http://localhost:8000/team-add)
