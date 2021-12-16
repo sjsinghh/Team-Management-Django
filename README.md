@@ -34,7 +34,7 @@ Now you are good to go.
 
 
 ### 5. URLs
-#### Team Members List: [http://localhost:8000/(http://localhost:8000/)
+#### Team Members List: [http://localhost:8000/](http://localhost:8000/)
 ![](https://i.imgur.com/76hGcmp.png)
 #### Add a new Team Member: [http://localhost:8000/team-add](http://localhost:8000/team-add)
 ![](https://i.imgur.com/TOAL57C.png)
