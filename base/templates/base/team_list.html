@@ -21,10 +21,20 @@
     <div class="team-wrapper" data-position="{{team_member.pk}}">
         <div class="team-title">
 
-            <div class="">
-                <i class="fa fa-user"></i>
-            </div>
+           
+           <div> 
+            {% load static %}   
+            <img class="team-icon"  src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" class="task-incomplete-icon"></img>
+           </div>
+            <div class="team-list-space">
             <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}}</a> 
+            <p>
+                {{team_member.phone_number}}
+            </p>
+            <p>
+                {{team_member.email}}
+            </p>
+        </div>
         </div>
         <div class="team-controls">
           
