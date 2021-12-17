@@ -12,39 +12,41 @@
 </div>
 
 <div id="team-add-wrapper">
-  
+
     <a id="add-link" href="{% url 'team-add' %}">&#x2b;</a>
-  
+
 </div>
 <div id="teamlist" class="team-items-wrapper">
     {% for team_member in team %}
     <div class="team-wrapper" data-position="{{team_member.pk}}">
         <div class="team-title">
 
-           
-           <div> 
-            {% load static %}   
-            <img class="team-icon"  src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" class="task-incomplete-icon"></img>
-           </div>
+
+            <div>
+                {% load static %}
+                <img class="team-icon" src="{% static 'avatar.png' %}" class="task-incomplete-icon"></img>
+            </div>
             <div class="team-list-space">
-            <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}}   {% if team_member.role == "Admin" %} <span>(Admin)</span> {% endif %}</a> 
-            <p>
-                {{team_member.phone_number}}
-            </p>
-            <p>
-                {{team_member.email}}
-            </p>
-        </div>
+                <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}} {%
+                    if team_member.role == "Admin" %} <span>(Admin)</span> {% endif %}</a>
+                <p>
+                    {{team_member.phone_number}}
+                </p>
+                <p>
+                    {{team_member.email}}
+                </p>
+            </div>
         </div>
         <div class="team-controls">
-          
+
         </div>
     </div>
 
     {% empty %}
     <div style="text-align: center; padding-bottom: 10px; line-height: 1em;">
         <h3>No Team Members are Added.</h3>
-        <h3>Add a <a style="text-decoration: none; color: #e53935;" href="{% url 'team-add' %}">New Team Member</a> ! </h3>
+        <h3>Add a <a style="text-decoration: none; color: #e53935;" href="{% url 'team-add' %}">New Team Member</a> !
+        </h3>
     </div>
     {% endfor %}
 </div>

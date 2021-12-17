@@ -5,8 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Team
 
-# Create your views here.
-
+#Application Views
 
 class TeamList(ListView):
     model = Team
