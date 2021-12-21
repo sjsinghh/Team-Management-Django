@@ -27,8 +27,7 @@
                 <img class="team-icon" src="{% static 'avatar.png' %}" class="task-incomplete-icon"></img>
             </div>
             <div class="team-list-space">
-                <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}} {%
-                    if team_member.role == "Admin" %} <span>(Admin)</span> {% endif %}</a>
+                <a href="{% url 'team-update' team_member.id %}">{{team_member.firstname}} {{team_member.lastname}} {%if team_member.role == "Admin" %} <span>(Admin)</span> {% endif %}</a>
                 <p>
                     {{team_member.phone_number}}
                 </p>
